@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+:root {
+  --PrimaryColor: rgb(229, 234, 245);
+  --usedLetterColor: rgb(250, 196, 196);
+  --activeDifficultyColor: rgba(120, 159, 233, 0.747);
+  --buttonHoverColor: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+}
+
+/* CENTERED */
+.word-placeholder,
+.board,
+.button,
+.line,
+.key-button,
+.letter-placeholder,
+.text,
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.board {
+  background: #020024;
+  background: linear-gradient(
+    342deg,
+    #020024 0%,
+    rgba(128, 66, 125, 0.23) 35%,
+    #7398a8 100%
+  );
+  height: 100vh;
+  /* filter: brightness(0.8); */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.pic-wrapper {
+  background: url(/Hangman/pics/keyboard.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: rgba(198, 214, 241, 0.055);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  font-weight: 700;
+  border: 1.5px solid #c6d6f1;
+}
+
+.restart {
+  width: 2.5rem;
+  padding: 0.3rem 0;
+}
+
+.key-button:hover,
+.button:hover {
+  background-color: #c6d6f1;
+}
+
+.keyboard {
+  width: 98%;
+}
+
+.line {
+  height: 2.3rem;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+
+.l3 {
+  padding-right: 3rem;
+}
+
+@media (max-width: 600px) {
+  .l3 {
+    padding-right: 1rem;
+  }
+}
+
+.text {
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: rgba(49, 45, 46, 0.171);
+  width: 100%;
+}
+
+.text,
+.letter-placeholder {
+  font-size: clamp(1.15rem, 4vw, 1.8rem);
+}
+
+/* STYLES ADDED BY JS */
+.word-placeholder {
+  height: 0%;
+}
+
+.letter-placeholder {
+  width: clamp(2rem, 5vw, 3rem);
+  height: clamp(2.5rem, 5vw, 3rem);
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  border-bottom: 3.5px solid #605f69;
+  margin: 0 0.1rem 3rem 0.1rem;
+}
+
+.key-button {
+  max-width: 9%;
+  height: 100%;
+  background-color: #d8d4d4;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 1px 3px #1a1a1d;
+  box-shadow: 2px 1px 3px #1a1a1d;
+  margin: 0 0.09rem;
+  width: 3rem;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.used-letter {
+  background-color: var(--usedLetterColor);
+}
+
+.used-letter:hover {
+  background-color: var(--usedLetterColor);
+}
+
+.active-difficulty {
+  background-color: var(--activeDifficultyColor);
+}
+
+.active-difficulty:hover {
+  background-color: var(--activeDifficultyColor);
+}
+
+/* button onclick */
+.key-button:active,
+.button:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+/*# sourceMappingURL=sass.css.map */

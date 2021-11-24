@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Hangman/styles.css" />
+    <link
+      rel="shortcut icon"
+      type="image.png"
+      href="/Hangman/pics/letter H.jpg"
+    />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="pic-wrapper">
+      <div class="board">
+        <div class="text"></div>
+        <!-- <div class="word-placeholder"></div>  is created dynamically-->
+
+        <div class="keyboard">
+          <div class="line l1"></div>
+          <div class="line l2"></div>
+          <div class="line l3"></div>
+        </div>
+
+        <div class="menu">
+          <div class="restart button"><i class="fas fa-redo-alt"></i></div>
+          <div class="easy button">Easy</div>
+          <div class="medium button">Medium</div>
+          <div class="hard button">Hard</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./hangman.js"></script>
+  </body>
+</html>
