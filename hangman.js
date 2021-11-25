@@ -41,7 +41,6 @@ const words = [
   "admire",
   "recommendation",
   "revive",
-  "heroin",
   "restrain",
   "appeal",
   "modernize",
