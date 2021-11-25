@@ -195,9 +195,9 @@ html,
 }
 
 /* supposedly this should fix staying hover effects after click, on devices that doesn't support hover */
-@media (hover: none) {
+@media (hover: hover) {
   .key-button,
-  .button {
+  .button:hover {
     background-color: #97cdf1;
   }
 }
