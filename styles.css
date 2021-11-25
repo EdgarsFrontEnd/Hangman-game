@@ -41,8 +41,8 @@ body {
   align-items: center;
 }
 
-/* safari is not good with 100vh on height because it doesnt take in to account url bar and bottom menu,
-because otherwise content would break on scroll */
+/* safari is not good with 100vh on height because it doesnt take in to account url bar and bottom menu
+    it is intentional, because otherwise content would break on scroll */
 body,
 html,
 .board,
@@ -68,7 +68,7 @@ html,
 }
 
 .pic-wrapper {
-  background: url(./pics/keyboard.jpg) no-repeat center;
+  background: url(/Hangman/pics/keyboard.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -99,7 +99,7 @@ html,
 
 .key-button:hover,
 .button:hover {
-  background-color: #c6d6f1;
+  background-color: #97cdf1;
 }
 
 .keyboard {
@@ -143,9 +143,9 @@ html,
   width: clamp(2rem, 5vw, 3rem);
   height: clamp(2.5rem, 5vw, 3rem);
   background-color: lightgray;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0.4rem 1rem;
-  border-bottom: 3.5px solid #605f69;
+  border-bottom: 2px solid #605f69;
   margin: 0 0.1rem 3rem 0.1rem;
 }
 
@@ -188,9 +188,49 @@ html,
 
 @media (max-width: 720px) {
   .letter-placeholder {
-    max-width: 9%;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2.3rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
+/* supposedly this should fix staying hover effects after click, on devices that doesn't support hover */
+@media (hover: none) {
+  .key-button,
+  .button {
+    background-color: #97cdf1;
+  }
+}
+
+/* mobile sideways layout change */
+@media (max-height: 420px) and (orientation: landscape) {
+  .keyboard {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  .letter-placeholder {
+    width: 2.2rem;
+    height: 2.1rem;
+    font-size: 1.1rem;
+  }
+  .text {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    margin: 0.5rem 0 3rem 0;
+  }
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .button {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    margin: 0 -0.6rem;
+  }
+  .restart {
+    margin-right: 2rem;
+  }
+}
 /*# sourceMappingURL=sass.css.map */
