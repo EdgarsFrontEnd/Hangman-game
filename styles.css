@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
 :root {
-  --PrimaryColor: rgb(229, 234, 245);
   --usedLetterColor: rgb(250, 196, 196);
   --activeDifficultyColor: rgba(120, 159, 233, 0.747);
-  --buttonHoverColor: ;
 }
 
 * {
@@ -43,6 +41,15 @@ body {
   align-items: center;
 }
 
+/* safari is not good with 100vh on height because it doesnt take in to account url bar and bottom menu,
+because otherwise content would break on scroll */
+body,
+html,
+.board,
+.pic-wrapper {
+  height: 100%;
+}
+
 .board {
   background: #020024;
   background: linear-gradient(
@@ -51,7 +58,6 @@ body {
     rgba(128, 66, 125, 0.23) 35%,
     #7398a8 100%
   );
-  height: 100vh;
   /* filter: brightness(0.8); */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -179,4 +185,12 @@ body {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
 }
+
+@media (max-width: 720px) {
+  .letter-placeholder {
+    max-width: 9%;
+    height: 2.5rem;
+  }
+}
+
 /*# sourceMappingURL=sass.css.map */
