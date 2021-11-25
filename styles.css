@@ -194,11 +194,19 @@ html,
   }
 }
 
-/* supposedly this should fix staying hover effects after click, on devices that doesn't support hover */
-@media (hover: hover) {
-  .key-button,
+/* hover only for desktops */
+@media (hover) {
+  .key-button:hover,
   .button:hover {
     background-color: #97cdf1;
+  }
+
+  .used-letter:hover {
+    background-color: var(--usedLetterColor);
+  }
+
+  .active-difficulty:hover {
+    background-color: var(--activeDifficultyColor);
   }
 }
 
