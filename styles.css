@@ -74,7 +74,7 @@ html,
 }
 
 .pic-wrapper {
-  background: url(/Hangman/pics/keyboard.jpg) no-repeat center;
+  background: url(./pics/keyboard.jpg) no-repeat center;
   background-size: cover;
 }
 
