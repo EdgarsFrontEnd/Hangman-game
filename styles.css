@@ -21,6 +21,12 @@ body {
   font-size: 1.15rem;
 }
 
+/* finally what i've been looking for */
+.button,
+.key-button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* CENTERED */
 .word-placeholder,
 .board,
@@ -68,7 +74,7 @@ html,
 }
 
 .pic-wrapper {
-  background: url(./pics/keyboard.jpg) no-repeat center;
+  background: url(/Hangman/pics/keyboard.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -95,11 +101,6 @@ html,
 .restart {
   width: 2.5rem;
   padding: 0.3rem 0;
-}
-
-.key-button:hover,
-.button:hover {
-  background-color: #97cdf1;
 }
 
 .keyboard {
@@ -167,15 +168,7 @@ html,
   background-color: var(--usedLetterColor);
 }
 
-.used-letter:hover {
-  background-color: var(--usedLetterColor);
-}
-
 .active-difficulty {
-  background-color: var(--activeDifficultyColor);
-}
-
-.active-difficulty:hover {
   background-color: var(--activeDifficultyColor);
 }
 
@@ -195,16 +188,14 @@ html,
 }
 
 /* hover only for desktops */
-@media (hover) {
+@media (hover: hover) {
   .key-button:hover,
   .button:hover {
     background-color: #97cdf1;
   }
-
   .used-letter:hover {
     background-color: var(--usedLetterColor);
   }
-
   .active-difficulty:hover {
     background-color: var(--activeDifficultyColor);
   }
@@ -241,4 +232,3 @@ html,
     margin-right: 2rem;
   }
 }
-/*# sourceMappingURL=sass.css.map */
