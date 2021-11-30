@@ -352,7 +352,10 @@ hard.addEventListener("click", () => {
 
 for (let i = 0; i < menu.length; i++) {
   menu[i].addEventListener("click", () => {
-    audioInterfaceButton.play();
+    setTimeout(() => {
+          audioInterfaceButton.play();
+        }, 100);
+    
     restartGame();
   });
 }
