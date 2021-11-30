@@ -209,17 +209,10 @@ const words = [
 ]; //words from    https://randomwordgenerator.com/
 
 // AUDIO
-const audioInterfaceButton = new Audio();
-audioInterfaceButton.src = "./sounds/interface select.wav";
-
-const audioKeyboard = new Audio();
-audioKeyboard.src = "./sounds/keyboard press2.wav";
-
-const audioGameWin = new Audio();
-audioGameWin.src = "./sounds/game won.wav";
-
-const audioGameLose = new Audio();
-audioGameLose.src = "./sounds/game lost.wav";
+const audioInterfaceButton = new Audio("./sounds/interface select.wav");
+const audioKeyboard = new Audio("./sounds/keyboard press2.wav");
+const audioGameWin = new Audio("./sounds/game won.wav");
+const audioGameLose = new Audio("./sounds/game lost.wav");
 
 let gameLimit = 10;
 let letterCounter = 0; // counts how many letters were guessed
