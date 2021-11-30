@@ -269,7 +269,6 @@ function restartGame() {
     for (let j = 0; j < lines[i].childNodes.length; j++) {
       lines[i].childNodes[j].classList.remove(
         "used-letter",
-        "used-letter:hover"
       );
     }
   }
@@ -299,7 +298,7 @@ for (let i = 0; i < keyboardLetters.length; i++) {
     audioKeyboard.play();
     // also prevents clicking while game message is being shown
     if (
-      newKeyButton.className != "key-button used-letter used-letter:hover" &&
+      newKeyButton.className != "key-button used-letter" &&
       word.length != letterCounter &&
       triesLeft > 0
     ) {
@@ -334,7 +333,6 @@ for (let i = 0; i < keyboardLetters.length; i++) {
         }, 2500);
       }
       this.classList.add("used-letter");
-      this.classList.add("used-letter:hover");
     }
   });
 }
@@ -370,7 +368,6 @@ for (let i = 0; i < menu.length; i++) {
 let prevDifficulty = 1;
 function updateDifficulty() {
   menu[prevDifficulty].classList.remove("active-difficulty");
-  menu[prevDifficulty].classList.remove("active-difficulty:hover");
   switch (gameLimit) {
     case 10:
       prevDifficulty = 1;
@@ -383,6 +380,5 @@ function updateDifficulty() {
       break;
   }
   menu[prevDifficulty].classList.add("active-difficulty");
-  menu[prevDifficulty].classList.add("active-difficulty:hover");
 }
 updateDifficulty();
